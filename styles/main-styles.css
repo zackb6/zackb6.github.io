@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    color: #333333;
+}
+#container {
+    border: 1px solid #999999;
+    padding: 10px;
+}
+
+a {
+    color: #0000FF;
+    text-decoration: none;
+}

@@ -1,0 +1,42 @@
+body {
+    font-family: Georgia;
+    background-color: #e9e9e9;
+}
+
+#page-content {
+    border: 1px solid #aaaaaa;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333333;
+    padding: 5px; 
+}
+
+nav a {
+    color: #ffffff;
+}
+nav a:hover {
+    background-color: #555555;
+}
+.topic-image {
+
+    border: 1px solid #cccccc;
+    padding: 5px;
+    width: 45%; 
+}
+
+.info-table {
+    width: 100%;
+}
+
+.info-table th, .info-table td {
+    padding: 5px;
+    border: 1px solid #aaaaaa;
+}
+
+.info-table th {
+    background-color: #cccccc;
+}

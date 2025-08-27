@@ -1,29 +1,25 @@
 body {
-    background-color: #1a1a1a;
-    font-family: Arial Black, sans-serif;
-    color: #f5f5f5;
+    background-color: #222222;
+    font-family: Verdana, sans-serif;
+    color: #eeeeee;
 }
 
 #page-content {
-    background-color: #2c2c2c;
-    border: 2px solid #d20a0a;
-    padding: 25px;
-    width: 90%;
-    margin: 40px auto;
+    background-color: #333333;
+    border: 1px solid #777777;
+    padding: 15px;
 }
 
 nav {
-    background-color: #1a1a1a;
-    padding: 10px;
+    background-color: #444444;
+    padding: 8px;
     text-align: center;
-    border-bottom: 2px solid #d20a0a;
 }
 
 nav a {
     color: #ffffff;
-    padding: 10px 15px;
+    padding: 8px;
     text-decoration: none;
-    font-weight: bold;
 }
 
 nav a:hover {
@@ -31,10 +27,9 @@ nav a:hover {
 }
 
 .topic-image {
-    border: 2px solid #d20a0a;
+    border: 1px solid #777777;
     padding: 4px;
     width: 45%;
-    margin: 5px;
 }
 
 .info-table {
@@ -44,8 +39,8 @@ nav a:hover {
 }
 
 .info-table th, .info-table td {
-    padding: 10px;
-    border: 1px solid #555555;
+    padding: 8px;
+    border: 1px solid #777777;
     text-align: left;
 }
 

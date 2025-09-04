@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Zack's 242 Assignment Portal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Portal</title>
     <link rel="stylesheet" href="styles/main-styles.css">
 </head>
 <body>
 
-    <div id="container">
+    <header>
+        <h1>Assignment Portal</h1>
+    </header>
 
-        <h1>CSCE 242 Web Assignments</h1>
-        <p>This page is a portal for my class assignments.</p>
+    <main>
+        <div class="assignments-container">
 
-        <p>
-            <a href="https://github.com/zackb6/zackb6.github.io">View Code Repository</a>
-        </p>
+            <div class="assignment-card">
+                <img src="images/assignment-1-screenshot.jpeg" alt="Screenshot of Assignment 1">
+                <h2>Assignment 1</h2>
+                <p>
+                    A description of the Ohio State football team.
+                </p>
+                <a href="assignments/assignment1/index.html">View Assignment 1</a>
+            </div>
 
-        <h2>Assignments</h2>
-        <ul>
-            <li><a href="assignments/assignment1/index.html">Assignment 1</a></li>
-            <li><a href="assignments/assignment2/index.html">Assignment 2</a></li>
-        </ul>
+            <div class="assignment-card">
+                <img src="images/assignment-2-screenshot.jpeg" alt="Screenshot of Assignment 2">
+                <h2>Assignment 2</h2>
+                <p>
+                    A brief history of the UFC.
+                </p>
+                <a href="assignments/assignment2/index.html">View Assignment 2</a>
+            </div>
 
-    </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>My Webpage Footer</p>
+    </footer>
 
 </body>
 </html>

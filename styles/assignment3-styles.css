@@ -1,88 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #ffffff;
+    background-color: #f0f0f0;
 }
 
 header {
-    background-color: #333;
-    padding: 10px;
+    background-color: #d14f4f;
+    padding: 5px;
 }
 
 nav a {
     color: white;
     padding: 10px;
-    text-decoration: none;
 }
 
 main {
-    padding: 20px;
+    padding: 15px;
 }
 
 footer {
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
     display: block;
 }
 
-.top-section {
-    background-color: #faf7e2; 
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-}
-
 /* flexbox */
-.main-grid-container {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 15px; 
-    background-color: #d14f4f; 
-    padding: 15px;
-    border: 1px solid #b33e3e;
+.layout-part-1, .layout-part-2 {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+    align-items: stretch; 
 }
 
-.sidebar {
-    flex-basis: 15%; 
-    background-color: #d14f4f;
-}
-
-.sidebar a {
-    display: block; 
-    color: white;
-    text-decoration: none;
-    padding: 5px 0;
-}
-
-.content-box {
-    flex-basis: 35%; 
-    background-color: #4b925b; 
-    color: white;
+.main-idea {
+    width: 33%;
+    background-color: #faf7e2; 
     padding: 10px;
-    border: 1px solid #3a7a4a;
+}
+
+.side-ideas {
+    width: 67%;
+}
+
+.gallery-grid {
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.idea-box {
+    background-color: #4b925b;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .gallery-item {
-    flex-basis: 15%; 
-    background-color: #4b925b; 
-    color: white;
+    background-color: #4b925b;
     padding: 10px;
-    border: 1px solid #3a7a4a;
+    width: 31%;
 }
 
 
-/* media query*/
+/* media query */
 @media (max-width: 768px) {
-    .sidebar,
-    .content-box,
-    .gallery-item {
-        flex-basis: 100%;
+    .layout-part-1, .layout-part-2 {
+        flex-direction: column;
+    }
+
+    .main-idea, .side-ideas, .gallery-grid, .gallery-item {
+        width: 100%;
     }
 }

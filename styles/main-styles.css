@@ -1,35 +1,48 @@
-    body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 header, footer {
-    background-color: #333333; 
+    background-color: #333333;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
+main {
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* flexbox */
 .assignments-container {
     display: flex;
-    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center; 
 }
 
 .assignment-card {
     background-color: white;
     border: 1px solid #cccccc;
     padding: 15px;
-    margin: 10px;
-    flex: 1;
+    margin: 10px; 
+    width: 300px; 
 }
 
 .assignment-card img {
-    width: 100%; 
+    width: 100%;
+    height: auto;
 }
 
-@media (max-width: 768px) {
-    .assignments-container {
-        flex-direction: column;
-    }
+.assignment-card a {
+    text-decoration: none;
+    color: #0066CC;
+    font-weight: bold;
 }

@@ -1,34 +1,26 @@
 const sunnyTimesBtn = document.getElementById("sunny-times-btn");
-const sunnyTimesText = document.getElementById("sunny-times-text");
+const sunnyTimesOutput = document.getElementById("sunny-times-output");
+
+const showSunnyTimes = () => {
+    sunnyTimesOutput.innerHTML = "Here comes the sun<br>Sun<br>Sun<br>Sun<br>Here it comes";
+};
+// shows sunny times
+sunnyTimesBtn.addEventListener("click", showSunnyTimes);
 
 const colorPicker = document.getElementById("color-picker");
 const colorChangeBtn = document.getElementById("color-change-btn");
-const colorBox = document.getElementById("color-box");
+const colorOutput = document.getElementById("color-output");
 
-const imageChangeBtn = document.getElementById("image-change-btn");
-const toggleImage = document.getElementById("toggle-image");
-
-
-/* sunny times function */
-const showSunnyTimes = () => {
-    sunnyTimesText.textContent = "Sunny Times. I did this. the following words for the Board will appear in the aligned paragraphs.";
-};
-
-// when the button is clicked it shows sunny times
-sunnyTimesBtn.addEventListener("click", showSunnyTimes);
-
-
-/* select a color function */
 const changeColor = () => {
     const selectedColor = colorPicker.value;
-
-    colorBox.style.backgroundColor = selectedColor;
+    colorOutput.style.backgroundColor = selectedColor;
+    colorOutput.textContent = selectedColor;
 };
 
 colorChangeBtn.addEventListener("click", changeColor);
+//image toggle
+const toggleImage = document.getElementById("toggle-image");
 
-
-/* =image change function */
 const changeImage = () => {
     if (toggleImage.src.includes("clouds")) {
         toggleImage.src = "images/sun.png";
@@ -37,4 +29,4 @@ const changeImage = () => {
     }
 };
 
-imageChangeBtn.addEventListener("click", changeImage);
+toggleImage.addEventListener("click", changeImage);

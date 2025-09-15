@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5: JavaScript Buttons</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Assignment 5: JavaScript Functions</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Assignment 5</h1>
+        <h1>JavaScript Buttons, Functions, and More</h1>
     </header>
 
-    <main class="card-container">
-
+    <main>
         <section class="card">
             <h2>Sunny Times</h2>
-            <p id="sunny-times-text">Click the button...</p>
+            <p>When the button is clicked, the following words will appear.</p>
+            <div id="sunny-times-output" class="output-box"></div>
             <button id="sunny-times-btn">Show Sunny Times</button>
         </section>
 
         <section class="card">
             <h2>Select a Color</h2>
-            <p id="color-box">This box will change color.</p>
-            <input type="color" id="color-picker">
+            <p>You can pick a color; the box below will change to that color, and the color code will appear.</p>
+            <div id="color-output" class="output-box">Select a color...</div>
+            <input type="color" id="color-picker" value="#ffffff">
             <button id="color-change-btn">Change Color</button>
         </section>
 
         <section class="card">
             <h2>Image Change</h2>
-            <img id="toggle-image" src="images/clouds.png" alt="A sky with clouds" title="Cloudy Sky">
-            <button id="image-change-btn">Change Image</button>
+            <p>When the image itself is clicked, it will change to a sunny image.</p>
+            <img id="toggle-image" src="images/cloud.png" alt="A sky with clouds or a sun" title="A fun image">
         </section>
 
     </main>

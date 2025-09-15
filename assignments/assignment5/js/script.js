@@ -4,7 +4,7 @@ const sunnyTimesOutput = document.getElementById("sunny-times-output");
 const showSunnyTimes = () => {
     sunnyTimesOutput.innerHTML = "Here comes the sun<br>Sun<br>Sun<br>Sun<br>Here it comes";
 };
-// shows sunny times
+
 sunnyTimesBtn.addEventListener("click", showSunnyTimes);
 
 const colorPicker = document.getElementById("color-picker");
@@ -18,7 +18,7 @@ const changeColor = () => {
 };
 
 colorChangeBtn.addEventListener("click", changeColor);
-//image toggle
+
 const toggleImage = document.getElementById("toggle-image");
 
 const changeImage = () => {

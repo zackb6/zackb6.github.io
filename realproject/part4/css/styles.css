@@ -1,0 +1,136 @@
+:root {
+    --color-background: #f8fafc;  /* Gray */
+    --color-surface: #ffffff;   /* cards and headers */
+    --color-primary: #3b82f6;   /* main color */
+    --color-primary-dark: #2563eb; /* for hover */
+    --color-text-dark: #1e293b;   /* headings */
+    --color-text-light: #64748b;  /* paragraphs */
+    --color-border: #e2e8f0;    /* border */
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: Arial, sans-serif;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--color-text-dark);
+}
+
+p {
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--color-primary);
+}
+
+nav a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: var(--color-primary);
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.record-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    text-align: center;
+    flex-basis: calc(25% - 16px); 
+}
+.record-card img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-border);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-light);
+}
+
+@media (max-width: 992px) {
+    .record-card {
+        flex-basis: calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; 
+    }
+    nav {
+        display: none; 
+        width: 100%;
+        order: 3; 
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid var(--color-border);
+    }
+    .nav-open {
+        display: block;
+    }
+    header {
+        flex-wrap: wrap;
+    }
+    .record-card {
+        flex-basis: calc(50% - 10px); 
+    }
+}

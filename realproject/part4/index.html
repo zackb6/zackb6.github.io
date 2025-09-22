@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Record - SleeveNotes</title>
+    <title>My Collection - SleeveNotes</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="logo">SleeveNotes</div>
-        <nav>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
             <a href="index.html">My Collection</a>
             <a href="add-new.html">Add New</a>
             <a href="wishlist.html">Wishlist</a>
@@ -18,20 +19,19 @@
     </header>
 
     <main class="container">
-        <h1>Add New Record</h1>
-        <div class="form-group">
-            <label for="album-title">Album Title</label>
-            <input type="text" id="album-title">
+        <h1>My Collection</h1>
+        <div class="card-grid">
+            <div class="record-card">
+                <a href="detail.html"><img src="images/album-art-1.jpg" alt="Album Art for The Dark Side of the Moon"></a>
+                <h3>The Dark Side of the Moon</h3>
+                <p>Pink Floyd</p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="artist">Artist</label>
-            <input type="text" id="artist">
-        </div>
-        <a href="#" class="button">Save Record</a>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 SleeveNotes</p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.assignment-box {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.box-header {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+h1, h2, h3 {
+    margin: 5px 0;
+}
+
+.exercise-nav {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.exercise-nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.exercise-content {
+    background-color: white;
+    padding: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.plant-result {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#plant-image {
+    width: 100px;
+    height: 100px;
+}
+
+.clock-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+#clock {
+    font-size: 2.5em;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.box-footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+    color: #888;
+    background-color: #f7f7f7;
+    border-top: 1px solid #ddd;
+}

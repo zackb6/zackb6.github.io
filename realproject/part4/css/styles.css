@@ -4,10 +4,10 @@
     --color-background: #111827;
     --color-surface: #1f2937;
     --color-accent: #22d3ee;
-    --color-accent-hover: #67e8f9;  /* hover */
+    --color-accent-hover: #67e8f9;
     --color-text-primary: #f9fafb;
     --color-text-secondary: #9ca3af;
-    --color-border: #374151;        /* borders */
+    --color-border: #374151;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -74,55 +74,99 @@ nav a:hover {
     padding: 12px 20px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px; 
+    border-radius: 8px;
     transition: background-color 0.2s;
 }
 .button:hover {
     background-color: var(--color-accent-hover);
 }
 
+.action-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.action-bar input {
+    flex-grow: 1;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--color-text-primary);
+}
 .card-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
-
 .record-card {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 12px; 
-    padding: 15px;
+    border-radius: 12px;
     text-align: center;
     flex-basis: calc(25% - 19px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
 }
 .record-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
-
 .record-card img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    border-radius: 12px 12px 0 0;
 }
-
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 20px;
+}
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: var(--color-text-secondary);
 }
 .form-group input {
     width: 100%;
     padding: 12px;
-    background-color: var(--color-background);
+    background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
-    border-radius: 8px; 
+    border-radius: 8px;
+}
+.wishlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+.stat-card {
+    flex: 1;
+    background-color: var(--color-surface);
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+}
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.stat-label {
+    margin-top: 5px;
+    color: var(--color-text-secondary);
 }
 
 footer {
@@ -134,33 +178,14 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .record-card {
-        flex-basis: calc(33.333% - 17px);
-    }
+    .record-card { flex-basis: calc(33.333% - 17px); }
 }
-
 @media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-    }
-    #main-nav {
-        display: none;
-        width: 100%;
-        order: 3;
-    }
-    nav a {
-        display: block;
-        text-align: center;
-        padding: 15px;
-        border-top: 1px solid var(--color-border);
-    }
-    .nav-open {
-        display: block;
-    }
-    header {
-        flex-wrap: wrap;
-    }
-    .record-card {
-        flex-basis: calc(50% - 13px);
-    }
+    #menu-toggle { display: block; }
+    nav { display: none; width: 100%; order: 3; }
+    nav a { display: block; text-align: center; padding: 15px; border-top: 1px solid var(--color-border); }
+    .nav-open { display: block; }
+    header { flex-wrap: wrap; }
+    .record-card { flex-basis: calc(50% - 13px); }
+    .stats-grid { flex-direction: column; }
 }

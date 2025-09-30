@@ -1,45 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - SleeveNotes</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">SleeveNotes</div>
-        <button id="menu-toggle">☰</button>
-        <nav id="main-nav">
-            <a href="index.html">My Collection</a>
-            <a href="add-new.html">Add New</a>
-            <a href="wishlist.html">Wishlist</a>
-            <a href="profile.html">Profile</a>
-        </nav>
-    </header>
+<main class="container">
+    <h1>My Profile & Statistics</h1>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div id="total-records-stat" class="stat-number">157</div>
+            <div class="stat-label">Total Records</div>
+        </div>
+        <div class="stat-card">
+            <div id="favorite-genre-stat" class="stat-number">Rock</div>
+            <div class="stat-label">Favorite Genre</div>
+        </div>
+        <div class="stat-card">
+            <div id="oldest-record-stat" class="stat-number">1967</div>
+            <div class="stat-label">Oldest Record</div>
+        </div>
+    </div>
 
-    <main class="container">
-        <h1>My Profile & Statistics</h1>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">157</div>
-                <div class="stat-label">Total Records</div>
+    <div class="profile-section">
+        <h2>Records by Genre</h2>
+        <div class="chart-container">
+            <div class="chart-bar-group">
+                <div class="chart-bar" style="height: 80%;"></div>
+                <p class="bar-label">Rock</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">Rock</div>
-                <div class="stat-label">Favorite Genre</div>
+            <div class="chart-bar-group">
+                <div class="chart-bar" style="height: 50%;"></div>
+                <p class="bar-label">Pop</p>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">1967</div>
-                <div class="stat-label">Oldest Record</div>
+            <div class="chart-bar-group">
+                <div class="chart-bar" style="height: 65%;"></div>
+                <p class="bar-label">Hip Hop</p>
+            </div>
+            <div class="chart-bar-group">
+                <div class="chart-bar" style="height: 30%;"></div>
+                <p class="bar-label">Jazz</p>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 SleeveNotes</p>
-    </footer>
-    <script src="js/main.js"></script>
-</body>
-</html>
+    </div>
+</main>

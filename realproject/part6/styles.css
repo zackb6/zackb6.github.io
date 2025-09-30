@@ -30,7 +30,7 @@ h1, h2, h3 {
     color: var(--color-text-dark);
 }
 body > .container > h1 {
-    color: var(--color-text-primary);
+    color: var(--color-text-light);
     text-align: center;
     font-size: 2.5em;
 }
@@ -61,11 +61,8 @@ nav a {
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
-    transition: color 0.2s;
 }
-nav a:hover {
-    color: var(--color-primary);
-}
+nav a:hover { color: var(--color-primary); }
 
 #menu-toggle {
     display: none;
@@ -85,7 +82,6 @@ nav a:hover {
 .record-card {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: 4px; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     text-align: center;
     flex-basis: calc(25% - 23px);
@@ -96,28 +92,13 @@ nav a:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.12);
 }
-
 .record-card img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
-.record-card h3 {
-    font-size: 1.1em;
-    margin: 15px 10px 5px 10px;
-}
-.record-card p {
-    font-size: 0.9em;
-    color: #777;
-    margin: 0 10px 15px 10px;
-}
-
-/* === Form and Other Components === */
-.form-container { max-width: 600px; margin: 40px auto; padding: 30px; background-color: var(--color-surface); border-radius: 4px; }
-.form-group label { color: #555; }
-.form-group input { background-color: var(--color-background); border: 1px solid #444; color: var(--color-text-light); border-radius: 4px; }
-.button { background-color: var(--color-primary); color: white; border-radius: 4px; }
-.button:hover { background-color: var(--color-primary-dark); }
+.record-card h3 { font-size: 1.1em; margin: 15px 10px 5px 10px; }
+.record-card p { font-size: 0.9em; color: #777; margin: 0 10px 15px 10px; }
 
 footer {
     text-align: center;
@@ -130,6 +111,7 @@ footer {
 @media (max-width: 992px) {
     .record-card { flex-basis: calc(33.333% - 20px); }
 }
+
 @media (max-width: 768px) {
     #menu-toggle { display: block; }
     #main-nav { display: none; width: 100%; order: 3; }

@@ -1,34 +1,64 @@
-<main class="container">
-    <h1>My Wishlist</h1>
-    <div class="action-bar">
-        <input type="text" placeholder="Add a new album to your wishlist...">
-        <a href="#" class="button">Add</a>
-    </div>
-    
-    <div class="wishlist-container">
-        <div class="wishlist-item">
-            <img src="images/placeholder-album-1.jpg" alt="Album Art">
-            <div class="wishlist-info">
-                <h3>Rumours</h3>
-                <p>Fleetwood Mac</p>
-            </div>
-            <a href="#" class="button-remove">Remove</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - SleeveNotes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">SleeveNotes</div>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
+            <a href="index.html">My Collection</a>
+            <a href="add-new.html">Add New</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="profile.html">Profile</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>My Wishlist</h1>
+        <div class="action-bar">
+            <input type="text" placeholder="Add a new album to your wishlist...">
+            <a href="#" class="button">Add</a>
         </div>
-        <div class="wishlist-item">
-            <img src="images/placeholder-album-2.jpg" alt="Album Art">
-            <div class="wishlist-info">
-                <h3>To Pimp a Butterfly</h3>
-                <p>Kendrick Lamar</p>
+        
+        <div class="wishlist-container">
+            <div class="wishlist-item">
+                <img src="images/placeholder-album-1.jpg" alt="Album Art">
+                <div class="wishlist-info">
+                    <h3>Rumours</h3>
+                    <p>Fleetwood Mac</p>
+                </div>
+                <a href="#" class="button-remove">Remove</a>
             </div>
-            <a href="#" class="button-remove">Remove</a>
-        </div>
-        <div class="wishlist-item">
-            <img src="images/placeholder-album-3.jpg" alt="Album Art">
-            <div class="wishlist-info">
-                <h3>Led Zeppelin IV</h3>
-                <p>Led Zeppelin</p>
+            <div class="wishlist-item">
+                <img src="images/placeholder-album-2.jpg" alt="Album Art">
+                <div class="wishlist-info">
+                    <h3>To Pimp a Butterfly</h3>
+                    <p>Kendrick Lamar</p>
+                </div>
+                <a href="#" class="button-remove">Remove</a>
             </div>
-            <a href="#" class="button-remove">Remove</a>
+            <div class="wishlist-item">
+                <img src="images/placeholder-album-3.jpg" alt="Album Art">
+                <div class="wishlist-info">
+                    <h3>Led Zeppelin IV</h3>
+                    <p>Led Zeppelin</p>
+                </div>
+                <a href="#" class="button-remove">Remove</a>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SleeveNotes</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -15,6 +15,8 @@
             <a href="add-new.html">Add New</a>
             <a href="wishlist.html">Wishlist</a>
             <a href="profile.html">Profile</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
@@ -22,17 +24,34 @@
         <h1>Add New Record</h1>
         <div class="form-container">
             <form id="add-form">
-                <div class="form-group">
-                    <label for="album-title">Album Title</label>
-                    <input type="text" id="album-title" required>
-                </div>
-                <div class="form-group">
-                    <label for="artist">Artist</label>
-                    <input type="text" id="artist" required>
-                </div>
-                <div class="form-group">
-                    <label for="year">Year</label>
-                    <input type="number" id="year" required>
+                <div class="form-row">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="album-title">Album Title</label>
+                            <input type="text" id="album-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="artist">Artist</label>
+                            <input type="text" id="artist" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" id="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Genre</label>
+                            <input type="text" id="genre">
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="cover-art">Cover Art</label>
+                            <input type="file" id="cover-art-input" accept="image/*">
+                            <div class="image-preview-box">
+                                <img src="" alt="Cover art preview" id="cover-art-preview">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button type="submit" class="button">Save Record</button>
             </form>

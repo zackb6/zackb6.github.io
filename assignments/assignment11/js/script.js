@@ -9,7 +9,6 @@ class Painting {
 }
 
 const paintings = [];
-
 paintings.push(new Painting("The Bee", "Artist A", 2023, "images/bee.jpg", true));
 paintings.push(new Painting("The Cat", "Artist B", 2022, "images/cat.jpg", false));
 paintings.push(new Painting("The Flowers", "Artist C", 2021, "images/flowers.jpg", true));
@@ -52,6 +51,7 @@ galleryContainer.addEventListener("click", (event) => {
     }
 });
 
+// === 6. Close the Popup ===
 closeBtn.addEventListener("click", () => {
     popup.classList.add("hidden");
 });

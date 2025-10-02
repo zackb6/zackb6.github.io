@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale<1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 11: JavaScript Classes</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,15 +12,19 @@
         <h1>Assignment 11: Classes</h1>
     </header>
 
-    <main id="gallery-container" class="gallery-container"></main>
+    <main id="gallery-container" class="gallery-container">
+        </main>
 
-    <div id="popup" class="modal hidden">
-        <div class="modal-content">
-            <span id="close-btn" class="close-btn">&times;</span>
-            <img id="popup-image" src="" alt="Painting">
-            <h2 id="popup-title"></h2>
-            <p id="popup-artist"></p>
-            <p id="popup-year"></p>
+    <div id="painting-modal" class="w3-modal">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-teal"> 
+                <span id="close-btn" class="w3-button w3-display-topright">&times;</span>
+                <h2 id="popup-title">Painting Title</h2>
+            </header>
+            <div class="w3-container popup-body">
+                <img id="popup-image" src="" alt="Full size painting">
+                <p id="popup-artist"></p>
+            </div>
         </div>
     </div>
 

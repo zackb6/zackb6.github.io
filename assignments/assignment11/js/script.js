@@ -1,50 +1,54 @@
 class Painting {
-    constructor(title, artist, year, image) {
-        this.title = title;
+    constructor(name, artist, image, isFramed) {
+        this.name = name;
         this.artist = artist;
-        this.year = year;
         this.image = image;
+        this.isFramed = isFramed;
+    }
+
+    getSection() {
+        return `
+            <div class="painting-section" data-name="${this.name}">
+                <h3>${this.name}</h3>
+                <img src="${this.image}" alt="${this.name}">
+            </div>
+        `;
     }
 }
 
-const paintings = [];
-paintings.push(new Painting("The Bee", "Artist A", 2023, "images/bee.jpg"));
-paintings.push(new Painting("The Cat", "Artist B", 2022, "images/cat.jpg"));
-paintings.push(new Painting("The Flowers", "Artist C", 2021, "images/flowers.jpg"));
-paintings.push(new Painting("The Fox", "Artist D", 2024, "images/fox.jpg"));
+const paintings = [
+    new Painting("The Bee", "Artist A", "images/bee.jpg", true),
+    new Painting("Dream love kitten", "Artist B", "images/cat.jpg", false),
+    new Painting("Flowers and Butterflies", "Artist C", "images/flowers.jpg", true),
+    new Painting("Forest Animals", "Artist D", "images/fox.jpg", true)
+];
 
 const galleryContainer = document.getElementById("gallery-container");
-const popup = document.getElementById("popup");
-const popupImage = document.getElementById("popup-image");
+const modal = document.getElementById("painting-modal");
 const popupTitle = document.getElementById("popup-title");
+const popupImage = document.getElementById("popup-image");
 const popupArtist = document.getElementById("popup-artist");
-const popupYear = document.getElementById("popup-year");
 const closeBtn = document.getElementById("close-btn");
 
-paintings.forEach((painting, index) => {
-    const frame = document.createElement("div");
-    frame.classList.add("painting-frame");
-    frame.dataset.index = index;
-    const img = document.createElement("img");
-    img.src = painting.image;
-    img.alt = painting.title;
-    frame.appendChild(img);
-    galleryContainer.appendChild(frame);
+paintings.forEach(painting => {
+    galleryContainer.innerHTML += painting.getSection();
 });
 
 galleryContainer.addEventListener("click", (event) => {
-    const clickedFrame = event.target.closest(".painting-frame");
-    if (clickedFrame) {
-        const index = clickedFrame.dataset.index;
-        const paintingData = paintings[index];
-        popupImage.src = paintingData.image;
-        popupTitle.textContent = paintingData.title;
-        popupArtist.textContent = paintingData.artist;
-        popupYear.textContent = `Year: ${paintingData.year}`;
-        popup.classList.remove("hidden");
-    }
+    const clickedPainting = event.target.closest(".painting-section");
+    if (!clickedPainting) return;
+
+    const paintingName = clickedPainting.dataset.name;
+
+    const paintingData = paintings.find(p => p.name === paintingName);
+    
+    popupTitle.textContent = paintingData.name;
+    popupArtist.textContent = `by ${paintingData.artist}`;
+    popupImage.src = paintingData.image;
+
+    modal.style.display = "block";
 });
 
 closeBtn.addEventListener("click", () => {
-    popup.classList.add("hidden");
+    modal.style.display = "none";
 });

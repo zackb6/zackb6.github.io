@@ -1,0 +1,66 @@
+[
+    {
+        "_id": 1,
+        "artist": "Pink Floyd",
+        "title": "The Dark Side of the Moon",
+        "year": 1973,
+        "genre": "Progressive Rock",
+        "image": "images/album-art-1.jpg"
+    },
+    {
+        "_id": 2,
+        "artist": "The Beatles",
+        "title": "Abbey Road",
+        "year": 1969,
+        "genre": "Rock",
+        "image": "images/album-art-2.jpg"
+    },
+    {
+        "_id": 3,
+        "artist": "Fleetwood Mac",
+        "title": "Rumours",
+        "year": 1977,
+        "genre": "Rock",
+        "image": "images/album-art-3.jpg"
+    },
+    {
+        "_id": 4,
+        "artist": "Led Zeppelin",
+        "title": "Led Zeppelin IV",
+        "year": 1971,
+        "genre": "Hard Rock",
+        "image": "images/album-art-4.jpg"
+    },
+    {
+        "_id": 5,
+        "artist": "Michael Jackson",
+        "title": "Thriller",
+        "year": 1982,
+        "genre": "Pop",
+        "image": "images/album-art-5.jpg"
+    },
+    {
+        "_id": 6,
+        "artist": "Kendrick Lamar",
+        "title": "To Pimp a Butterfly",
+        "year": 2015,
+        "genre": "Hip Hop",
+        "image": "images/album-art-6.jpg"
+    },
+    {
+        "_id": 7,
+        "artist": "Nirvana",
+        "title": "Nevermind",
+        "year": 1991,
+        "genre": "Grunge",
+        "image": "images/album-art-7.jpg"
+    },
+    {
+        "_id": 8,
+        "artist": "Daft Punk",
+        "title": "Random Access Memories",
+        "year": 2013,
+        "genre": "Electronic",
+        "image": "images/album-art-8.jpg"
+    }
+]

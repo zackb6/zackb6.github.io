@@ -4,13 +4,11 @@
     --font-heading: 'Lora', serif;
     --font-body: 'Lato', sans-serif;
     --color-background: #1a1a1a;
-    --color-surface: #fdfdfd;
+    --color-surface: #ffffff;
     --color-primary: #c0a062;
-    --color-primary-dark: #a18041;
     --color-text-dark: #212121;
     --color-text-light: #cccccc;
     --color-border: #e0e0e0;
-    --color-danger: #ef4444;
 }
 
 body {
@@ -20,26 +18,9 @@ body {
     margin: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    color: var(--color-text-dark);
-}
-body > .container > h1 {
-    color: var(--color-text-light);
-    text-align: center;
-    font-size: 2.5em;
-    border-bottom: 1px solid #333;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-.form-container h1 { color: var(--color-text-dark); }
-
+.container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+h1, h2, h3 { font-family: var(--font-heading); color: var(--color-text-dark); }
+body > .container > h1 { color: var(--color-text-light); text-align: center; font-size: 2.5em; }
 p { color: #555555; line-height: 1.7; }
 
 header {
@@ -54,25 +35,10 @@ header {
     z-index: 1000;
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-weight: bold;
-    font-size: 1.8em;
-    color: var(--color-text-dark);
-}
-
-nav a {
-    color: var(--color-text-dark);
-    text-decoration: none;
-    padding: 10px;
-    font-weight: bold;
-}
+.logo { font-family: var(--font-heading); font-weight: bold; font-size: 1.8em; color: var(--color-text-dark); }
+nav a { color: var(--color-text-dark); text-decoration: none; padding: 10px; font-weight: bold; }
 nav a:hover { color: var(--color-primary); }
-
 #menu-toggle { display: none; background: none; border: none; color: var(--color-text-dark); font-size: 2em; cursor: pointer; }
-
-.button { display: inline-block; border: none; background-color: var(--color-primary); color: white; padding: 12px 20px; text-decoration: none; font-weight: bold; cursor: pointer; }
-.button:hover { background-color: var(--color-primary-dark); }
 
 .card-grid { display: flex; flex-wrap: wrap; gap: 30px; }
 .record-card {
@@ -87,24 +53,9 @@ nav a:hover { color: var(--color-primary); }
 .record-card h3 { font-size: 1.1em; margin: 15px 10px 5px 10px; }
 .record-card p { font-size: 0.9em; color: #777; margin: 0 10px 15px 10px; }
 
-.form-container { max-width: 600px; margin: 40px auto; padding: 30px; background-color: var(--color-surface); border-radius: 4px; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #555; }
-.form-group input, .form-group textarea { width: 100%; padding: 12px; background-color: #f9f9f9; border: 1px solid #ddd; font-family: var(--font-body); font-size: 1em; }
-
-.wishlist-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background-color: var(--color-surface); border: 1px solid var(--color-border); margin-bottom: 10px; }
-.button-remove { background-color: var(--color-danger); color: white; padding: 8px 12px; text-decoration: none; font-size: 0.9em; font-weight: bold; }
-
-.stats-grid { display: flex; gap: 20px; text-align: center; }
-.stat-card { flex: 1; background-color: var(--color-surface); padding: 25px; border: 1px solid var(--color-border); }
-.stat-number { font-size: 3.5em; font-weight: bold; color: var(--color-primary); }
-.stat-label { margin-top: 5px; color: var(--color-text-dark); }
-
 footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #888; }
 
-@media (max-width: 992px) {
-    .record-card { flex-basis: calc(33.333% - 20px); }
-}
+@media (max-width: 992px) { .record-card { flex-basis: calc(33.333% - 20px); } }
 @media (max-width: 768px) {
     #menu-toggle { display: block; }
     #main-nav { display: none; width: 100%; order: 3; }
@@ -112,5 +63,4 @@ footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px so
     .nav-open { display: block; }
     header { flex-wrap: wrap; }
     .record-card { flex-basis: calc(50% - 15px); }
-    .stats-grid { flex-direction: column; }
 }

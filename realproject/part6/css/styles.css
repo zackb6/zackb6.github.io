@@ -1,27 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lora:wght@700&display=swap');
 
 :root {
     --font-heading: 'Lora', serif;
-    --font-body: 'Lato', sans-serif;
-    --color-background: #1a1a1a;
+    --font-body: 'Poppins', sans-serif;
+    --color-background: #f8fafc;
     --color-surface: #ffffff;
-    --color-primary: #c0a062;
-    --color-text-dark: #212121;
-    --color-text-light: #cccccc;
-    --color-border: #e0e0e0;
+    --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
+    --color-text-dark: #1e293b;
+    --color-text-light: #64748b;
+    --color-border: #e2e8f0;
+    --color-danger: #ef4444;
 }
 
 body {
     background-color: var(--color-background);
     font-family: var(--font-body);
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     margin: 0;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
-h1, h2, h3 { font-family: var(--font-heading); color: var(--color-text-dark); }
-body > .container > h1 { color: var(--color-text-light); text-align: center; font-size: 2.5em; }
-p { color: #555555; line-height: 1.7; }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+}
+body > .container > h1 {
+    color: var(--color-text-dark);
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
 
 header {
     background-color: var(--color-surface);
@@ -35,27 +56,70 @@ header {
     z-index: 1000;
 }
 
-.logo { font-family: var(--font-heading); font-weight: bold; font-size: 1.8em; color: var(--color-text-dark); }
-nav a { color: var(--color-text-dark); text-decoration: none; padding: 10px; font-weight: bold; }
-nav a:hover { color: var(--color-primary); }
-#menu-toggle { display: none; background: none; border: none; color: var(--color-text-dark); font-size: 2em; cursor: pointer; }
+.logo {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.8em;
+    color: var(--color-primary);
+}
 
-.card-grid { display: flex; flex-wrap: wrap; gap: 30px; }
+nav a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+nav a:hover { color: var(--color-primary); }
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-dark);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
 .record-card {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     text-align: center;
     flex-basis: calc(25% - 23px);
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.record-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.record-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+}
+.record-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
 .record-card h3 { font-size: 1.1em; margin: 15px 10px 5px 10px; }
-.record-card p { font-size: 0.9em; color: #777; margin: 0 10px 15px 10px; }
+.record-card p { font-size: 0.9em; color: var(--color-text-light); margin: 0 10px 15px 10px; }
 
-footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #888; }
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-light);
+}
 
-@media (max-width: 992px) { .record-card { flex-basis: calc(33.333% - 20px); } }
+@media (max-width: 992px) {
+    .record-card { flex-basis: calc(33.333% - 20px); }
+}
+
 @media (max-width: 768px) {
     #menu-toggle { display: block; }
     #main-nav { display: none; width: 100%; order: 3; }
@@ -63,32 +127,4 @@ footer { text-align: center; margin-top: 40px; padding: 20px; border-top: 1px so
     .nav-open { display: block; }
     header { flex-wrap: wrap; }
     .record-card { flex-basis: calc(50% - 15px); }
-}
-
-.form-row {
-    display: flex;
-    gap: 30px;
-}
-
-.form-column {
-    flex: 1;
-}
-
-.image-preview-box {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 2px dashed #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    background-color: #f0f0f0;
-    overflow: hidden;
-}
-
-#art-preview {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
 }
